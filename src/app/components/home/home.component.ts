@@ -22,13 +22,12 @@ export class HomeComponent implements OnInit {
   }
 
   browse() {
-    this.es.remote.dialog.showOpenDialog({ title: 'Select a folder', properties: ['openDirectory'] }, (folderPath) => {
-      if (folderPath === undefined) {
-        console.log("You didn't select a folder");
-        return;
-      }
-      this.fileInputsForm.get('folderName').setValue(folderPath);
-    });
+    const folderPath = this.es.remote.dialog.showOpenDialog({ title: 'Select a folder', properties: ['openDirectory'] })
+    if (folderPath === undefined) {
+      console.log("You didn't select a folder");
+      return;
+    }
+    this.fileInputsForm.get('folderName').setValue(folderPath);
   }
 
   executeProcess() {
