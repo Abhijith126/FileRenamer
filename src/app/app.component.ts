@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'FileRenamer';
+  title = 'File Renamer';
+  subtitle = 'Rename bulk files based on preferred Prefix/Show name';
+  note ="Note: All numbers/episode numbers will be retained. Apart from excluded string*"
 }
