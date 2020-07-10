@@ -1,8 +1,11 @@
-<p>
-    process works!
-</p>
+<div class="Progress">
+    <div class="Progress__Code">
+        <code *ngFor="let file of files">
+            <span> {{ file.oldFileName }} -> {{ file.newFileName }} </span>
+        </code>
+    </div>
 
-<button routerLink="">Home</button>
-<div *ngFor="let file of files | keyvalue">
-    <li>{{ file.key }}</li>
+    <button class="Progress__Home" color="primary" mat-raised-button routerLink="">
+        Home
+    </button>
 </div>

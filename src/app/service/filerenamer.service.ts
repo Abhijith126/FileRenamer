@@ -8,34 +8,40 @@ import { Router } from '@angular/router';
 export class FilerenamerService {
     filePath: string;
     filePrefix: any;
+    fs = this.electronService.remote.require('fs');
+    path = this.electronService.remote.require('path');
 
     constructor(private electronService: ElectronService, private router: Router) {}
 
     renameFiles(fileList) {
-        const fs = this.electronService.remote.require('fs');
+        const fileData = [];
         fileList.forEach((value: string, key: string) => {
-            fs.renameSync(value, this.editFileName(key));
+            const modifiedFile = this.editFileName(key);
+            this.fs.renameSync(value, modifiedFile);
+            fileData.push({
+                oldFileName: key,
+                newFileName: this.path.parse(modifiedFile).name,
+            });
         });
+        return fileData;
     }
 
     editFileName(fileName) {
-        const path = this.electronService.remote.require('path');
-        fileName = this.removeJunkData(fileName);
-        const extension = path.extname(fileName);
-        const epNo = this.fetchEpisodeNo(fileName);
-        return `${this.filePath}/${this.filePrefix}${epNo}${extension}`;
+        const _fileName = this.removeJunkData(fileName);
+        const extension = this.path.extname(_fileName);
+        const epNo = this.fetchEpisodeNo(_fileName);
+        return `${this.filePath}${this.path.sep}${this.filePrefix}${epNo}${extension}`;
     }
 
     displayFiles() {
-        const fs = this.electronService.remote.require('fs');
         const files_ = new Map<String, String>();
         return new Promise((resolve, reject) => {
             const folderPath = this.filePath;
-            fs.readdir(folderPath, function (err, items) {
+            this.fs.readdir(folderPath, (err, items) => {
                 if (err) reject(err);
                 for (let i = 0; i < items.length; i++) {
                     const name = folderPath + '/' + items[i];
-                    if (!fs.statSync(name).isDirectory()) {
+                    if (!this.fs.statSync(name).isDirectory()) {
                         files_.set(items[i], name);
                     }
                 }

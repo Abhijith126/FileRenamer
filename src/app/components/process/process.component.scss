@@ -1,0 +1,19 @@
+.Progress {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    flex-direction: column;
+    &__Code {
+        background-color: #f2f2f2;
+        height: 300px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 1em;
+    }
+    &__Home {
+        margin: 1em;
+    }
+}
