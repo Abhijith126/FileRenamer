@@ -17,13 +17,41 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  imports: [CommonModule, MatButtonModule, MatToolbarModule, MatListModule, MatSnackBarModule, MatGridListModule, MatSelectModule,
-    MatCheckboxModule, MatInputModule, MatProgressSpinnerModule, MatCardModule, MatSidenavModule, MatIconModule, MatAutocompleteModule,
-    MatDialogModule, MatFormFieldModule],
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatListModule,
+        MatSnackBarModule,
+        MatGridListModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        MatInputModule,
+        MatProgressSpinnerModule,
+        MatCardModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatAutocompleteModule,
+        MatDialogModule,
+        MatFormFieldModule,
+    ],
 
-  exports: [MatButtonModule, MatToolbarModule, MatListModule, MatSnackBarModule, MatGridListModule, MatSelectModule, MatCheckboxModule,
-    MatInputModule, MatProgressSpinnerModule, MatCardModule, MatSidenavModule, MatIconModule, MatAutocompleteModule, MatDialogModule,
-    MatFormFieldModule],
-
+    exports: [
+        MatButtonModule,
+        MatToolbarModule,
+        MatListModule,
+        MatSnackBarModule,
+        MatGridListModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        MatInputModule,
+        MatProgressSpinnerModule,
+        MatCardModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatAutocompleteModule,
+        MatDialogModule,
+        MatFormFieldModule,
+    ],
 })
-export class MaterialModule { }
+export class MaterialModule {}

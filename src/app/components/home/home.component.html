@@ -1,42 +1,54 @@
-<br>
+<br />
 <div class="container">
     <div class="container">
-        <form class="example-form" style="text-align: center;"
-            [formGroup]="fileInputsForm">
+        <form class="example-form" style="text-align: center;" [formGroup]="fileInputsForm">
             <mat-form-field appearance="outline" class="example-full-width">
                 <mat-label>Provide the folder path</mat-label>
-                <input matInput placeholder="Folder Path"
-                    formControlName="folderName">
+                <input matInput placeholder="Folder Path" formControlName="folderName" />
                 <mat-icon matSuffix>folder</mat-icon>
                 <mat-hint>Please provide the folder path.</mat-hint>
-                <mat-error
-                    *ngIf="fileInputsForm.get('folderName').hasError('required')">
-                    Folder path is <strong>required</strong>. Ex: D:/Naruto
-                    Shippuden
-                </mat-error>
-            </mat-form-field><br>
-            <button type="button" mat-raised-button color="primary" style="margin-top:10px"
-                (click)="browse()">Browser
-                Folder</button>
-            <br><br>
+                <mat-error *ngIf="fileInputsForm.get('folderName').hasError('required')">
+                    Folder path is <strong>required</strong>. Ex: D:/Naruto Shippuden
+                </mat-error> </mat-form-field
+            ><br />
+            <button
+                type="button"
+                mat-raised-button
+                color="primary"
+                style="margin-top: 10px;"
+                (click)="browse()"
+            >
+                Browser Folder
+            </button>
+            <br /><br />
 
             <mat-form-field appearance="outline" class="example-full-width">
                 <mat-label>Name of the Show / Prefix</mat-label>
-                <input matInput placeholder="Name of the show"
-                    formControlName="filePrefix">
+                <input matInput placeholder="Name of the show" formControlName="filePrefix" />
                 <mat-icon matSuffix>ondemand_video</mat-icon>
-                <mat-hint>Prefix will help in naming each and every file
-                    correctly.</mat-hint>
-                <mat-error
-                    *ngIf="fileInputsForm.get('filePrefix').hasError('required')">
+                <mat-hint>Prefix will help in naming each and every file correctly.</mat-hint>
+                <mat-error *ngIf="fileInputsForm.get('filePrefix').hasError('required')">
                     Prefix is <strong>required</strong>. Ex: Naruto Shippuden
-                </mat-error>
-            </mat-form-field><br><br>
-            <button class="submit-btn" color="success" mat-raised-button
-                type="submit" [disabled]="!fileInputsForm.valid"
-                (click)="executeProcess()">Execute</button>&nbsp;&nbsp;
-            <button class="submit-btn" color="warn" mat-raised-button
-                (click)="fileInputsForm.reset()">Clear</button>
+                </mat-error> </mat-form-field
+            ><br /><br />
+            <button
+                class="submit-btn"
+                color="success"
+                mat-raised-button
+                type="submit"
+                [disabled]="!fileInputsForm.valid"
+                (click)="executeProcess()"
+            >
+                Execute</button
+            >&nbsp;&nbsp;
+            <button
+                class="submit-btn"
+                color="warn"
+                mat-raised-button
+                (click)="fileInputsForm.reset()"
+            >
+                Clear
+            </button>
         </form>
     </div>
 </div>

@@ -12,22 +12,18 @@ import { FilerenamerService } from './service/filerenamer.service';
 import { ProcessComponent } from './components/process/process.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ProcessComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    NgxElectronModule,
-    NgxFsModule,
-    BrowserAnimationsModule,
-    MaterialModule
-  ],
-  providers: [FilerenamerService],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent, HomeComponent, ProcessComponent],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        NgxElectronModule,
+        NgxFsModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+    ],
+    providers: [FilerenamerService],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
