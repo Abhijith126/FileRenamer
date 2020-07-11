@@ -1,15 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxElectronModule } from 'ngx-electron';
 import { NgxFsModule } from 'ngx-fs';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProcessComponent } from './components/process/process.component';
 import { MaterialModule } from './modules/material.module';
 import { FilerenamerService } from './service/filerenamer.service';
-import { ProcessComponent } from './components/process/process.component';
 
 @NgModule({
     declarations: [AppComponent, HomeComponent, ProcessComponent],

@@ -7,14 +7,14 @@ import { FilerenamerService } from 'src/app/service/filerenamer.service';
     styleUrls: ['./process.component.scss'],
 })
 export class ProcessComponent implements OnInit {
-    files: any = [];
+    public files: any = [];
     constructor(private frs: FilerenamerService) {}
 
-    ngOnInit() {
+    public ngOnInit() {
         this.frs.displayFiles().then(files => this.processFiles(files));
     }
 
-    processFiles(fileList) {
+    public processFiles(fileList) {
         this.files = this.frs.renameFiles(fileList);
     }
 }
