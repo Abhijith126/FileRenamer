@@ -9,7 +9,7 @@ This application is built to rename files inside a folder with a specific prefix
 #### How it works?
 
 Basically based on the folder name, all files will be renamed by removing unwanted text and keeping the episode name.
-This application follows a simple format {Prefix}{EpisodeNumber}.
+This application follows a simple format {Prefix}{EpisodeNumber}{FileExtension}.
 
 ### How to use the application?
 
@@ -40,7 +40,7 @@ Everyone is welcome to contribute to this project if you find this interesting a
 
 Templates are provided to create tickets for both Issues and Feature requests. Please note that this is not my full-time work and expect a delay in response.
 
-You can view existing issues and requests [here](https://github.com/Darkness126/FileRenamer/issues)
+You can view existing issues and requests [here](https://github.com/Darkness126/FileRenamer/issues).
 
 ### Exception Logic
 

@@ -11,9 +11,13 @@
         margin: 2em;
     }
     &--footer {
-        padding: 2em;
+        padding: 1em;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    &a {
+        color: lightblue;
+        cursor: pointer;
     }
 }

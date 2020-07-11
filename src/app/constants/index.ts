@@ -1,7 +1,7 @@
 export const LINKS = {
     HOW_TO: 'https://github.com/Darkness126/FileRenamer/blob/master/README.md',
     DOCS: 'https://github.com/Darkness126/FileRenamer/blob/master/README.md',
-    GITHUB: 'https://github.com/Darkness126/FileRenamer/issues',
+    GITHUB: 'https://github.com/Darkness126/FileRenamer/',
     PROFILE: 'https://abhijith.online/',
 };
 
