@@ -23,7 +23,7 @@ export class AppComponent {
                 submenu: [
                     {
                         label: 'Home',
-                        click: () => this.ngZone.run(() => this.router.navigate(['home'])),
+                        click: () => this.ngZone.run(() => this.router.navigate([''])),
                     },
                     {
                         role: isMac ? 'close' : 'quit',

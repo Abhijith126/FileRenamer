@@ -21,6 +21,10 @@ function createWindow() {
         }),
     );
     Menu.setApplicationMenu(null);
+
+    // Uncomment to toggle developer tools for debugging
+    // win.webContents.openDevTools();
+
     win.on('closed', () => {
         win = null;
     });

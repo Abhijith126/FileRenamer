@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit {
 
     public ngOnInit(): void {
         this.versions = process.versions;
-        this.platform = 'Windows';
+        this.platform = process.platform;
     }
 
     public openWebUrl() {

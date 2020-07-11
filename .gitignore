@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/release
 
 # dependencies
 /node_modules
@@ -37,3 +38,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#build files
+/file-renamer-win32-x64
