@@ -52,6 +52,6 @@ The application removes the below set of string if present in the file name.
 
 ### License
 
-This project is licensed under [GNU V3](/LICENSE)
+This project is licensed under [GPL V3](/LICENSE)
 
 [Back to the top &uparrow;](#introduction)
