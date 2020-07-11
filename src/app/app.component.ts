@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
+import { Router } from '@angular/router';
 import { ElectronService } from 'ngx-electron';
+
+import { LINKS, TEXTS } from './constants';
 
 @Component({
     selector: 'app-root',
@@ -7,26 +10,57 @@ import { ElectronService } from 'ngx-electron';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    public title = 'File Renamer';
-    public subtitle = 'Rename bulk files based on preferred Prefix/Show name';
-    public note = 'Note: All numbers/episode numbers will be retained. Apart from excluded string*';
+    public title = TEXTS.TITLE;
+    public subtitle = TEXTS.SUBTITLE;
 
-    constructor(private es: ElectronService) {
-        const template = [
+    constructor(private es: ElectronService, private router: Router, private ngZone: NgZone) {
+        const shell = this.es.shell;
+        const remote = this.es.remote;
+        const isMac = process && process.platform === 'darwin';
+        const template: Electron.MenuItemConstructorOptions[] = [
             {
                 label: 'File',
                 submenu: [
                     {
-                        label: 'Open',
-                        click: () => {
-                            // console.log('clocked');
-                        },
+                        label: 'Home',
+                        click: () => this.ngZone.run(() => this.router.navigate(['home'])),
+                    },
+                    {
+                        role: isMac ? 'close' : 'quit',
+                    },
+                ],
+            },
+            {
+                label: 'Edit',
+                submenu: [{ role: 'cut' }, { role: 'copy' }, { role: 'paste' }],
+            },
+            {
+                label: 'Help',
+                submenu: [
+                    {
+                        label: 'How to',
+                        click: () => shell.openExternal(LINKS.HOW_TO),
+                    },
+                    { type: 'separator' },
+                    {
+                        label: 'Documentation',
+                        click: () => shell.openExternal(LINKS.DOCS),
+                    },
+                    {
+                        label: 'Github',
+
+                        click: () => shell.openExternal(LINKS.GITHUB),
+                    },
+                    { type: 'separator' },
+                    {
+                        label: 'About',
+                        click: () => this.ngZone.run(() => this.router.navigate(['about'])),
                     },
                 ],
             },
         ];
 
-        const menu = this.es.remote.Menu.buildFromTemplate(template);
-        this.es.remote.Menu.setApplicationMenu(menu);
+        const menu = remote.Menu.buildFromTemplate(template);
+        remote.Menu.setApplicationMenu(menu);
     }
 }

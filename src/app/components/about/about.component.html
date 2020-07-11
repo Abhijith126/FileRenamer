@@ -1,0 +1,17 @@
+<div class="About">
+    <code class="About__Versions">
+        <span> Version: {{ app?.getVersion() }}</span>
+        <span> Chrome: {{ versions?.chrome }}</span>
+        <span> Electron: {{ versions?.electron }}</span>
+        <span> V8: {{ versions?.v8 }}</span>
+        <span> OS: {{ platform }}</span>
+    </code>
+
+    <div class="About--footer">
+        <span>Copyright © {{ currentYear }} File Renamer. All rights reserved</span>
+        <span>
+            Developed and Manintained by
+            <a (click)="openWebUrl()" target="_blank">Abhijith P</a>
+        </span>
+    </div>
+</div>

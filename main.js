@@ -20,8 +20,7 @@ function createWindow() {
             slashes: true,
         }),
     );
-    // Menu.setApplicationMenu(null);
-
+    Menu.setApplicationMenu(null);
     win.on('closed', () => {
         win = null;
     });

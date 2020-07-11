@@ -7,13 +7,14 @@ import { NgxFsModule } from 'ngx-fs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProcessComponent } from './components/process/process.component';
 import { MaterialModule } from './modules/material.module';
 import { FilerenamerService } from './service/filerenamer.service';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ProcessComponent],
+    declarations: [AppComponent, HomeComponent, ProcessComponent, AboutComponent],
     imports: [
         BrowserModule,
         FormsModule,
