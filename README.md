@@ -13,7 +13,7 @@ This application follows a simple format {Prefix}{EpisodeNumber}.
 
 ### How to use the application?
 
-1. Download the setup from Github Releases
+1. Download the setup from Github [Releases](https://github.com/Darkness126/FileRenamer/releases)
 2. Install the application
 3. The application will be launched as soon as it is installed
 4. Choose a folder where the files are present
@@ -26,8 +26,10 @@ This application follows a simple format {Prefix}{EpisodeNumber}.
 This is an initial version of the application tested on few scenarios only. Proceed with caution.
 
 ```
-I am not responsible for lost files, unknown file names, thermonuclear war, or you getting fired because you messed up the file.
-YOU are choosing to make these modifications, and if you point the finger at me for messing up your files, I will laugh at you.
+I am not responsible for lost files, unknown file names, thermonuclear war,
+or you getting fired because you messed up the file.
+YOU are choosing to make these modifications and if you point the finger at me for messing up your files,
+I will laugh at you.
 ```
 
 ### Contributions
@@ -37,6 +39,8 @@ Everyone is welcome to contribute to this project if you find this interesting a
 ### Issues and Feature Requests
 
 Templates are provided to create tickets for both Issues and Feature requests. Please note that this is not my full-time work and expect a delay in response.
+
+You can view existing issues and requests [here](https://github.com/Darkness126/FileRenamer/issues)
 
 ### Exception Logic
 
